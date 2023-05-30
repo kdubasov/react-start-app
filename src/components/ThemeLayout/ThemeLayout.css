@@ -1,0 +1,9 @@
+.ThemeLayout.dark{
+    --app-light: var(--bs-dark);
+    --app-dark: var(--bs-light);
+}
+
+.ThemeLayout.light{
+    --app-light: var(--bs-light);
+    --app-dark: var(--bs-dark);
+}

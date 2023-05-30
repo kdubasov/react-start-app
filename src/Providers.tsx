@@ -7,6 +7,9 @@ import "./i18n/i18n.ts";
 import NavbarTop from "./components/NavbarTop/NavbarTop.tsx";
 import {useTranslation} from "react-i18next";
 import FullPageLoader from "./components/FullPageLoader/FullPageLoader.tsx";
+import {Provider} from "react-redux";
+import store from "./store/store.ts";
+import ThemeLayout from "./components/ThemeLayout/ThemeLayout.tsx";
 
 const Providers = () => {
 
@@ -17,8 +20,12 @@ const Providers = () => {
 	return (
 		<React.StrictMode>
 			<BrowserRouter>
-				<NavbarTop />
-				<Router />
+				<Provider store={store}>
+					<ThemeLayout>
+						<NavbarTop />
+						<Router />
+					</ThemeLayout>
+				</Provider>
 			</BrowserRouter>
 		</React.StrictMode>
 	);

@@ -1,0 +1,8 @@
+.NavbarTop {
+    background: var(--app-light);
+    color: var(--app-dark);
+}
+
+.NavbarTop a.nav-link {
+    color: var(--app-dark);
+}
